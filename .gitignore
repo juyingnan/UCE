@@ -165,4 +165,4 @@ cython_debug/
 .vscode
 
 # PROJECT SPECIFIC
-.model_files/
+model_files/
