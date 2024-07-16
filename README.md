@@ -2,6 +2,10 @@
 
 This repo includes a PyTorch [HuggingFace Accelerator](https://huggingface.co/docs/accelerate/package_reference/accelerator) implementation of the UCE model, to be used to embed individual anndata datasets.
 
+# Branch
+
+This is a branch of UCE working on HuBMAP Lung data only
+
 ## Installation
 
 ```
