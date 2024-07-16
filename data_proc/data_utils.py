@@ -156,12 +156,12 @@ def adata_path_to_prot_chrom_starts(adata, dataset_species, spec_pe_genes, gene_
     """
         Given a :path: to an h5ad, 
     """    
-    pe_row_idxs = torch.tensor([spec_pe_genes.index(k.upper()) + offset for k in adata.var[hugo_symbol]]).long()
+    pe_row_idxs = torch.tensor([spec_pe_genes.index(k.upper()) + offset for k in adata.var['hugo_symbol']]).long()
     print(len(np.unique(pe_row_idxs)))
     
     spec_chrom = gene_to_chrom_pos[gene_to_chrom_pos["species"] == dataset_species].set_index("gene_symbol")
 
-    gene_chrom = spec_chrom.loc[[k.upper() for k in adata.var[hugo_symbol]]]
+    gene_chrom = spec_chrom.loc[[k.upper() for k in adata.var['hugo_symbol']]]
 
     dataset_chroms = gene_chrom["spec_chrom"].cat.codes # now this is correctely indexed by species and chromosome
     print("Max Code:", max(dataset_chroms))
