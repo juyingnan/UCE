@@ -8,3 +8,15 @@ python eval_single_anndata.py --adata_path C:/Users/yiju/Desktop/temp_data/HBM76
 python eval_single_anndata.py --adata_path C:/Users/yiju/Desktop/temp_data/HBM929.VSJQ.633/HBM929.VSJQ.633_data_fixed.h5ad --dir C:/Users/yiju/Desktop/temp_data/HBM929.VSJQ.633/ --species human --skip False
 python eval_single_anndata.py --adata_path C:/Users/yiju/Desktop/temp_data/HBM948.GXMD.986/HBM948.GXMD.986_data_fixed.h5ad --dir C:/Users/yiju/Desktop/temp_data/HBM948.GXMD.986/ --species human --skip False
 python eval_single_anndata.py --adata_path C:/Users/yiju/Desktop/temp_data/HBM975.WQQQ.853/HBM975.WQQQ.853_data_fixed.h5ad --dir C:/Users/yiju/Desktop/temp_data/HBM975.WQQQ.853/ --species human --skip False
+
+
+python preview_umap.py --h5ad_path C:\Users\yiju\Desktop\temp_data\HBM265.FQWZ.384\HBM265.FQWZ.384_data_fixed_uce_adata.h5ad
+python preview_umap.py --h5ad_path C:\Users\yiju\Desktop\temp_data\HBM444.DXLZ.643\HBM444.DXLZ.643_data_fixed_uce_adata.h5ad
+python preview_umap.py --h5ad_path C:\Users\yiju\Desktop\temp_data\HBM456.GRCM.369\HBM456.GRCM.369_data_fixed_uce_adata.h5ad
+python preview_umap.py --h5ad_path C:\Users\yiju\Desktop\temp_data\HBM468.SSXX.967\HBM468.SSXX.967_data_fixed_uce_adata.h5ad
+python preview_umap.py --h5ad_path C:\Users\yiju\Desktop\temp_data\HBM578.BDBP.672\HBM578.BDBP.672_data_fixed_uce_adata.h5ad
+python preview_umap.py --h5ad_path C:\Users\yiju\Desktop\temp_data\HBM675.RVGB.258\HBM675.RVGB.258_data_fixed_uce_adata.h5ad
+python preview_umap.py --h5ad_path C:\Users\yiju\Desktop\temp_data\HBM762.RPDR.282\HBM762.RPDR.282_data_fixed_uce_adata.h5ad
+python preview_umap.py --h5ad_path C:\Users\yiju\Desktop\temp_data\HBM929.VSJQ.633\HBM929.VSJQ.633_data_fixed_uce_adata.h5ad
+python preview_umap.py --h5ad_path C:\Users\yiju\Desktop\temp_data\HBM948.GXMD.986\HBM948.GXMD.986_data_fixed_uce_adata.h5ad
+python preview_umap.py --h5ad_path C:\Users\yiju\Desktop\temp_data\HBM975.WQQQ.853\HBM975.WQQQ.853_data_fixed_uce_adata.h5ad
