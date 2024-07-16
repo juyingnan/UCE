@@ -64,16 +64,16 @@ def load_gene_embeddings_adata(adata: AnnData, species: list, embedding_model: s
         set(gene_symbol_to_embedding)
         for gene_symbol_to_embedding in species_to_gene_symbol_to_embedding.values()
     ])
-    genes_to_use = {gene for gene in adata.var_names if gene.lower() in genes_with_embeddings}
+    genes_to_use = {gene for gene in adata.var[hugo_symbol] if gene.lower() in genes_with_embeddings}
 
     # Subset data to only use genes with embeddings
-    adata = adata[:, adata.var_names.isin(genes_to_use)]
+    adata = adata[:, adata.var[hugo_symbol].isin(genes_to_use)]
 
     # Set up dictionary mapping species to gene embedding matrix (num_genes, embedding_dim)
     species_to_gene_embeddings = {
         species_name: torch.stack([
             species_to_gene_symbol_to_embedding[species_name][gene_symbol.lower()]
-            for gene_symbol in adata.var_names
+            for gene_symbol in adata.var[hugo_symbol]
         ])
         for species_name in species_names
     }
