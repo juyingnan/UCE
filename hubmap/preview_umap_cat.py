@@ -2,6 +2,7 @@ import scanpy as sc
 import matplotlib.pyplot as plt
 import os
 import argparse
+from sklearn.metrics import calinski_harabasz_score
 
 high_level = {
     'club cell:nasal': 'Epithelial Cells',
@@ -110,9 +111,22 @@ detailed_level = {
 def visualize_umap(h5ad_file_path):
     # Load the AnnData file (with UCE embeddings and cell type labels)
     adata = sc.read_h5ad(h5ad_file_path)
-    adata.obs['high_level'] = adata.obs['CL_Label'].map(high_level)
-    adata.obs['detailed_level'] = adata.obs['CL_Label'].map(detailed_level)
+    #adata.obs['high_level'] = adata.obs['CL_Label'].map(high_level)
+    adata.obs['high_level'] = adata.obs['CL_Label'].apply(lambda x: high_level.get(x, 'other'))
+    #adata.obs['detailed_level'] = adata.obs['CL_Label'].map(detailed_level)
+    adata.obs['detailed_level'] = adata.obs['CL_Label'].apply(lambda x: detailed_level.get(x, 'other'))
 
+    # Find and print cell types that were labeled as 'other'
+    high_level_others = adata.obs['CL_Label'][adata.obs['high_level'] == 'other'].unique()
+    detailed_level_others = adata.obs['CL_Label'][adata.obs['detailed_level'] == 'other'].unique()
+
+    print("Cell types labeled as 'other' in high_level:")
+    for cell_type in high_level_others:
+        print('higher', cell_type)
+
+    print("\nCell types labeled as 'other' in detailed_level:")
+    for cell_type in detailed_level_others:
+        print('detailed', cell_type)
 
     # Define the strategies
     strategies = ['CL_Label', 'high_level', 'detailed_level']
@@ -131,6 +145,13 @@ def visualize_umap(h5ad_file_path):
 
                 # Plot the UMAP with cell type information
                 sc.pl.umap(adata, color=strategy, ax=ax, show=False)
+
+                # Calculate Calinski-Harabasz Index
+                calinski_harabasz_avg = calinski_harabasz_score(adata.obsm['X_umap'], adata.obs[strategy])
+                print(f"Calinski-Harabasz Index for {strategy}: {calinski_harabasz_avg:.3f}")
+
+                # Add Calinski-Harabasz Index to the plot
+                plt.text(0.5, -0.1, f'Calinski-Harabasz Index: {calinski_harabasz_avg:.3f}', ha='center', va='center', transform=ax.transAxes, fontsize=12)
 
                 # Move the legend outside the plot
                 #plt.tight_layout(rect=[0, 0, 0.6, 1])  # Adjust the right padding to make room for the legend
