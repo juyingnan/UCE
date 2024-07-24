@@ -108,7 +108,7 @@ detailed_level = {
 }
 
 
-def visualize_umap(h5ad_file_path):
+def visualize_umap(h5ad_file_path, post=""):
     # Load the AnnData file (with UCE embeddings and cell type labels)
     adata = sc.read_h5ad(h5ad_file_path)
     #adata.obs['high_level'] = adata.obs['CL_Label'].map(high_level)
@@ -158,7 +158,7 @@ def visualize_umap(h5ad_file_path):
                 ax.legend()
 
                 # Save the plot to the same folder as the h5ad file
-                output_file_path = os.path.join(os.path.dirname(h5ad_file_path), f'umap_{strategy}.png')
+                output_file_path = os.path.join(os.path.dirname(h5ad_file_path), f'umap_{strategy}{post}.png')
                 plt.savefig(output_file_path, bbox_inches='tight')
 
                 # Show the plot
@@ -171,6 +171,7 @@ def visualize_umap(h5ad_file_path):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Visualize UMAP with UCE embeddings and cell type labels.')
     parser.add_argument('--h5ad_path', type=str, required=True, help='Full path to the h5ad file.')
+    parser.add_argument('--post', type=str, required=True, help='Postfix of generated images.')
     args = parser.parse_args()
 
-    visualize_umap(args.h5ad_path)
+    visualize_umap(args.h5ad_path, "_" + args.post if args.post else "")
