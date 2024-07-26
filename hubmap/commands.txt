@@ -1,3 +1,6 @@
+# Lung data
+
+# Running UCE on Layer 4 models
 python eval_single_anndata.py --adata_path C:/Users/yiju/Desktop/temp_data/HBM265.FQWZ.384/HBM265.FQWZ.384_data_fixed.h5ad --dir C:/Users/yiju/Desktop/temp_data/HBM265.FQWZ.384/ --species human --skip False
 python eval_single_anndata.py --adata_path C:/Users/yiju/Desktop/temp_data/HBM444.DXLZ.643/HBM444.DXLZ.643_data_fixed.h5ad --dir C:/Users/yiju/Desktop/temp_data/HBM444.DXLZ.643/ --species human --skip False
 python eval_single_anndata.py --adata_path C:/Users/yiju/Desktop/temp_data/HBM456.GRCM.369/HBM456.GRCM.369_data_fixed.h5ad --dir C:/Users/yiju/Desktop/temp_data/HBM456.GRCM.369/ --species human --skip False
@@ -9,6 +12,7 @@ python eval_single_anndata.py --adata_path C:/Users/yiju/Desktop/temp_data/HBM92
 python eval_single_anndata.py --adata_path C:/Users/yiju/Desktop/temp_data/HBM948.GXMD.986/HBM948.GXMD.986_data_fixed.h5ad --dir C:/Users/yiju/Desktop/temp_data/HBM948.GXMD.986/ --species human --skip False
 python eval_single_anndata.py --adata_path C:/Users/yiju/Desktop/temp_data/HBM975.WQQQ.853/HBM975.WQQQ.853_data_fixed.h5ad --dir C:/Users/yiju/Desktop/temp_data/HBM975.WQQQ.853/ --species human --skip False
 
+# Umap Visualization UCE on Layer 4 models
 python preview_umap_cat.py --h5ad_path C:\Users\yiju\Desktop\temp_data\HBM265.FQWZ.384\HBM265.FQWZ.384_data_fixed_uce_adata_l4.h5ad --post l4
 python preview_umap_cat.py --h5ad_path C:\Users\yiju\Desktop\temp_data\HBM444.DXLZ.643\HBM444.DXLZ.643_data_fixed_uce_adata_l4.h5ad --post l4
 python preview_umap_cat.py --h5ad_path C:\Users\yiju\Desktop\temp_data\HBM456.GRCM.369\HBM456.GRCM.369_data_fixed_uce_adata_l4.h5ad --post l4
@@ -20,7 +24,7 @@ python preview_umap_cat.py --h5ad_path C:\Users\yiju\Desktop\temp_data\HBM929.VS
 python preview_umap_cat.py --h5ad_path C:\Users\yiju\Desktop\temp_data\HBM948.GXMD.986\HBM948.GXMD.986_data_fixed_uce_adata_l4.h5ad --post l4
 python preview_umap_cat.py --h5ad_path C:\Users\yiju\Desktop\temp_data\HBM975.WQQQ.853\HBM975.WQQQ.853_data_fixed_uce_adata_l4.h5ad --post l4
 
-
+# Running UCE on Layer 33 models
 python eval_single_anndata.py --adata_path C:/Users/yiju/Desktop/temp_data/HBM265.FQWZ.384/HBM265.FQWZ.384_data_fixed.h5ad --dir C:/Users/yiju/Desktop/temp_data/HBM265.FQWZ.384/ --model_loc C:\Users\yiju\Desktop\UCE\model_files\33l_8ep_1024t_1280.torch --species human --skip False --nlayers 33
 python eval_single_anndata.py --adata_path C:/Users/yiju/Desktop/temp_data/HBM444.DXLZ.643/HBM444.DXLZ.643_data_fixed.h5ad --dir C:/Users/yiju/Desktop/temp_data/HBM444.DXLZ.643/ --model_loc C:\Users\yiju\Desktop\UCE\model_files\33l_8ep_1024t_1280.torch --species human --skip False --nlayers 33
 python eval_single_anndata.py --adata_path C:/Users/yiju/Desktop/temp_data/HBM456.GRCM.369/HBM456.GRCM.369_data_fixed.h5ad --dir C:/Users/yiju/Desktop/temp_data/HBM456.GRCM.369/ --model_loc C:\Users\yiju\Desktop\UCE\model_files\33l_8ep_1024t_1280.torch --species human --skip False --nlayers 33
@@ -32,6 +36,7 @@ python eval_single_anndata.py --adata_path C:/Users/yiju/Desktop/temp_data/HBM92
 python eval_single_anndata.py --adata_path C:/Users/yiju/Desktop/temp_data/HBM948.GXMD.986/HBM948.GXMD.986_data_fixed.h5ad --dir C:/Users/yiju/Desktop/temp_data/HBM948.GXMD.986/ --model_loc C:\Users\yiju\Desktop\UCE\model_files\33l_8ep_1024t_1280.torch --species human --skip False --nlayers 33
 python eval_single_anndata.py --adata_path C:/Users/yiju/Desktop/temp_data/HBM975.WQQQ.853/HBM975.WQQQ.853_data_fixed.h5ad --dir C:/Users/yiju/Desktop/temp_data/HBM975.WQQQ.853/ --model_loc C:\Users\yiju\Desktop\UCE\model_files\33l_8ep_1024t_1280.torch --species human --skip False --nlayers 33
 
+# Umap Visualization UCE on Layer 33 models
 python preview_umap_cat.py --h5ad_path C:\Users\yiju\Desktop\temp_data\HBM265.FQWZ.384\HBM265.FQWZ.384_data_fixed_uce_adata.h5ad --post l33
 python preview_umap_cat.py --h5ad_path C:\Users\yiju\Desktop\temp_data\HBM444.DXLZ.643\HBM444.DXLZ.643_data_fixed_uce_adata.h5ad --post l33
 python preview_umap_cat.py --h5ad_path C:\Users\yiju\Desktop\temp_data\HBM456.GRCM.369\HBM456.GRCM.369_data_fixed_uce_adata.h5ad --post l33
@@ -43,9 +48,13 @@ python preview_umap_cat.py --h5ad_path C:\Users\yiju\Desktop\temp_data\HBM929.VS
 python preview_umap_cat.py --h5ad_path C:\Users\yiju\Desktop\temp_data\HBM948.GXMD.986\HBM948.GXMD.986_data_fixed_uce_adata.h5ad --post l33
 python preview_umap_cat.py --h5ad_path C:\Users\yiju\Desktop\temp_data\HBM975.WQQQ.853\HBM975.WQQQ.853_data_fixed_uce_adata.h5ad --post l33
 
+# Gtex data
+
+# Running UCE on Layer 44models
 python eval_single_anndata.py --adata_path C:/Users/yiju/Desktop/temp_data/gtext_immune/GTEx_8_tissues_snRNAseq_immune_atlas_071421.public_obs.h5ad --dir C:/Users/yiju/Desktop/temp_data/gtext_immune/ --species human --skip False
 python eval_single_anndata.py --adata_path C:/Users/yiju/Desktop/temp_data/gtext_full/GTEx_8_tissues_snRNAseq_atlas_071421.public_obs.h5ad --dir C:/Users/yiju/Desktop/temp_data/gtext_full/ --species human --skip False
 
+# Umap Visualization UCE on Layer 4 models
 python preview_umap_gtex.py --h5ad_path C:\Users\yiju\Desktop\temp_data\gtext_immune\GTEx_8_tissues_snRNAseq_immune_atlas_071421.public_obs_uce_adata.h5ad --original True
 python preview_umap_gtex.py --h5ad_path C:\Users\yiju\Desktop\temp_data\gtext_immune\GTEx_8_tissues_snRNAseq_immune_atlas_071421.public_obs_uce_adata.h5ad
 
