@@ -42,3 +42,12 @@ python preview_umap_cat.py --h5ad_path C:\Users\yiju\Desktop\temp_data\HBM762.RP
 python preview_umap_cat.py --h5ad_path C:\Users\yiju\Desktop\temp_data\HBM929.VSJQ.633\HBM929.VSJQ.633_data_fixed_uce_adata.h5ad --post l33
 python preview_umap_cat.py --h5ad_path C:\Users\yiju\Desktop\temp_data\HBM948.GXMD.986\HBM948.GXMD.986_data_fixed_uce_adata.h5ad --post l33
 python preview_umap_cat.py --h5ad_path C:\Users\yiju\Desktop\temp_data\HBM975.WQQQ.853\HBM975.WQQQ.853_data_fixed_uce_adata.h5ad --post l33
+
+python eval_single_anndata.py --adata_path C:/Users/yiju/Desktop/temp_data/gtext_immune/GTEx_8_tissues_snRNAseq_immune_atlas_071421.public_obs.h5ad --dir C:/Users/yiju/Desktop/temp_data/gtext_immune/ --species human --skip False
+python eval_single_anndata.py --adata_path C:/Users/yiju/Desktop/temp_data/gtext_full/GTEx_8_tissues_snRNAseq_atlas_071421.public_obs.h5ad --dir C:/Users/yiju/Desktop/temp_data/gtext_full/ --species human --skip False
+
+python preview_umap_gtex.py --h5ad_path C:\Users\yiju\Desktop\temp_data\gtext_immune\GTEx_8_tissues_snRNAseq_immune_atlas_071421.public_obs_uce_adata.h5ad --original True
+python preview_umap_gtex.py --h5ad_path C:\Users\yiju\Desktop\temp_data\gtext_immune\GTEx_8_tissues_snRNAseq_immune_atlas_071421.public_obs_uce_adata.h5ad
+
+python preview_umap_gtex.py --h5ad_path C:\Users\yiju\Desktop\temp_data\gtext_full\GTEx_8_tissues_snRNAseq_atlas_071421.public_obs_uce_adata.h5ad --original True
+python preview_umap_gtex.py --h5ad_path C:\Users\yiju\Desktop\temp_data\gtext_full\GTEx_8_tissues_snRNAseq_atlas_071421.public_obs_uce_adata.h5ad
