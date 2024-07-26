@@ -1,6 +1,6 @@
 import scanpy as sc
 
-# Load your AnnData object
+# Load AnnData object
 file_path = r'c:\users\yiju\desktop\10k_pbmcs_proc_uce_adata.h5ad'
 adata = sc.read_h5ad(file_path)
 
