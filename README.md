@@ -6,6 +6,8 @@ This is a branch of UCE working on HuBMAP Lung data only
 
 For detailed scripts and instructions on processing and analyzing single-cell RNA sequencing data, refer to the [HubMAP folder](hubmap/).
 
+# ORIGINAL README
+
 # Universal Cell Embeddings
 
 This repo includes a PyTorch [HuggingFace Accelerator](https://huggingface.co/docs/accelerate/package_reference/accelerator) implementation of the UCE model, to be used to embed individual anndata datasets.
